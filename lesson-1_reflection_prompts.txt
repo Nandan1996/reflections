@@ -1,0 +1,110 @@
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+	It just shows you the differences and the old vs new content of the file, so you can focus on what has changed
+	You won't miss any difference because you'll get all them as result of the command, and you can run it again
+	to double check that the file has been reviewed according to what you expect
+
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+	It helps you to see the evolution in the code, and find when you introduced a bug. If you use it to blame who did it 
+	that is fine, but you should use is to learn on other errors and even from your own mistakes.
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+	Pros - you can choose the way it works better for you
+
+	Cons - you don't get a consistend commit policy if you are not consistent on your decisions
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+	Git is code oriented, so is more likely you want to track changes for multiple files in a single commit action
+	Google Docs is document oriented, so the changes are only related to a single document. No interdocument relations are allowed
+
+
+How can you use the commands git log and git diff to view the history of files?
+
+	Use git log to get the list of all changes, and search for the changes you are interested in
+
+	The use git diff to see the changes between two commits (from git log) and you'll get them hightlighted in nice colors!
+
+
+How might using version control make you more confident to make changes that could break something?
+
+	You can always go back to a previous version so the bug is removed, and then investigate when has the bug been introduced.
+
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+	I want to start using in my personal projects in github
+
+
+
+How Often to Commit
+	Since you can choose when to make a commit, you might be wondering how often to commit your changes. It's usually a good idea to keep commits small. As the diff between two versions gets bigger, it gets harder to understand and less useful. However, you don’t want to make your commits too small either. If you always save a commit every time you change a line of code, your history will be harder to read since it will have a huge number of commits over a short time period.
+
+	A good rule of thumb is to make one commit per logical change. For example, if you fixed a typo, then fixed a bug in a separate part of the file, you should use one commit for each change since they are logically separate. If you do this, each commit will have one purpose that can be easily understood. Git allows you to write a short message explaining what was changed in each commit, and that message will be more useful if each commit has a single logical change.
+
+
+One Commit per Logical Change Solution.
+
+You commit all the changes required to add a new feature, which you’ve been working on for a week. You haven’t committed since you started working on it.
+
+	This commit seems too big. It's easier to understand what each commit does if each only does one thing and is fairly small. Going a week without committing is not the best idea.
+
+You found three typos in your README. You fix and commit the first.
+
+	This commit seems too small. It would be better to fix all three typos, then commit. That way, your history won't get too cluttered with typo fixes. Plus, you don’t need to worry about introducing bugs to a README, so bundling changes together is more likely to be a good idea.
+	
+You commit all the changes required to add a new feature, which you’ve been working on for an hour.
+
+	This is probably a good size for a commit. All the work is on a single feature, so the commit will have a clear logical purpose. After an hour, the diff will probably have a fair amount of content in it, but not too much to understand.
+
+	On the other hand, sometimes after working for an hour you’ll have run into more than one natural committing point, in which case you would want to break the feature up into smaller commits. Because of this, “too big” could also be a reasonable answer here.
+
+You fix two small bugs in different functions and commit them both at once.
+
+	This commit is probably too big. It would have been better to commit after the first bug fix, since the two bug fixes aren't related to each other.
+
+Judgment Call
+
+	Choosing when to commit is a judgment call, and it's not always cut-and-dried. When choosing whether to commit, just keep in mind that each commit should have one clear, logical purpose, and you should never do too much work without committing.
+
+Git Errors and Warnings Solution
+
+>Should not be doing an octopus
+	Octopus is a strategy Git uses to combine many different versions of code together. This message can appear if you try to use this strategy in an inappropriate situation.
+
+>You are in 'detached HEAD' state
+
+	HEAD is what Git calls the commit you are currently on. You can “detach” the HEAD by switching to a previous commit, which we’ll see in the next video. Despite what it sounds like, it’s actually not a bad thing to detach the HEAD. Git just warns you so that you’ll realize you’re doing it.
+
+>Panic! (the 'impossible' happened)
+
+	This is a real error message, but it’s not output by Git. Instead it’s output by GHC, the compiler for a programming language called Haskell. It’s reserved for particularly surprising errors!
+
+Takeaway We hope these errors and warnings amused you as much as they amused us! Now that you know what kind of errors Git can throw, you’re ready to start checking out previous versions of files with Caroline.
+
+Behavior of git checkout
+>Checking out an earlier commit will change the state of at least one file.
+
+	This is sometimes true. Git doesn't allow you to save a new commit if no files have been updated, so you might think this is always true. However, it's possible to do the following:
+
+	Save a commit (call this commit 1).
+	Update some files and save another commit (call this commit 2).
+	Change all the files back to their state during commit 1, then save again (call this commit 3).
+	This sometimes happens if commit 2 contained a bug, and it's important to fix the bug quickly. The easiest thing to do might be to remove all the changes introduced by commit 2 to fix the bug, then figure out how to safely reintroduce the changes later.
+
+	At this point, commit 3 is the latest commit, so if you checkout commit 1, none of the files will be changed. 
+
+
+>Checking out an earlier commit will change the state of more than one file.
+
+>Checking out an earlier commit will change the state of every file in the repository.
+
+	Both of these are sometimes true. Since each commit tracks the state of all files in the repository, it is possible that checking out an earlier commit will change the state of multiple files, or even all the files in the repository. However, it is possible to save a new commit after changing only one file, so it is possible only one file will change. 
+
+
+>After checking out a commit, the state of all the files in the repository will be from the same point in time.
+
+	This is always true. A commit saves a snapshot of all files in the repository at the time the commit was made, so checking out an earlier commit will result in all the files being reverted to their state at the time the commit was made. That is, the files will be in a consistent state.		
