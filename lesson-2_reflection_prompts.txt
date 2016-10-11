@@ -6,3 +6,6 @@
  you think it offers?
  	it allows us to control the size of commit.
 
+>How can you use the staging area to make sure you have one commit per logical change?
+	During commit check the diff between staged file and recently commited one.
+	Also only stag file that contains only one logical change and related file.
