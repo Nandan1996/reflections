@@ -1,0 +1,4 @@
+>What happens when you initialize a repository? Why do you need to do it?
+	when we use git init,it creates a .git directory that keeps track of objects and configuration file.The already contained files are kept as untracked but we can add them later and commit it.
+	i.e not any default commit.
+
