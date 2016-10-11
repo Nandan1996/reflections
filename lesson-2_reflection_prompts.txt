@@ -2,3 +2,7 @@
 	when we use git init,it creates a .git directory that keeps track of objects and configuration file.The already contained files are kept as untracked but we can add them later and commit it.
 	i.e not any default commit.
 
+>How is the staging area different from the working directory and the repository? What value do
+ you think it offers?
+ 	it allows us to control the size of commit.
+
