@@ -19,3 +19,6 @@
 	They illustrated the idea of reachability, and how you can checkout a previous commit to put yourself in a "detached HEAD state"
 	that can be unreachable if you checkout a commit on a named branch.  You can use git checkout -b "new_branch_name" to keep changes in
 	a detached HEAD state.
+>What is the result of merging two branches together?  Why do we represent it in the diagram the
+ way we do?
+	The result is a new commit with 2 parents, one from each branch. This preserves reachability for all commits from both branches.
