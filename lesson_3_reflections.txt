@@ -11,3 +11,14 @@ local?
 
  	   Because it gives us facility when to except the thange,i.e it won't change automatically when i am working on code.
  	   Let suppose the new version of coode is broken,so the buggy code will automatically reflect into my local repositry,so i would like to pull it manually when the bug get fixed.
+
+>Describe the differences between forks, clones, and branches. When would you use one instead of 
+ another?
+
+ 	   forks - cloning a repositry of someone else on github server on my account.
+ 	   clones - to clone any git repositry to any where we have access to.
+ 	   branch - allow us to add changes in the same repositry.
+
+ 	   I use fork when it is not allowed to modify original one but i want to make changes public.
+ 	   i use clone when i want to work on a repository locally rather than using github website.
+ 	   i use branching when i want to add changes to reposity without affecting the existing version(master branch).i.e main production.
