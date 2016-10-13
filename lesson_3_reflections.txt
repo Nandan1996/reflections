@@ -5,3 +5,9 @@ local?
       i.e not only to get contributed by someone. i also use when 
       i want to be able to see my code from difrent computer and keep it up to date.
       remote repository can be a good way to keep backup of local data.
+
+>Why might you want to always pull changes manually rather than having Git automatically stay up-to
+ -date with your remote repository?
+
+ 	   Because it gives us facility when to except the thange,i.e it won't change automatically when i am working on code.
+ 	   Let suppose the new version of coode is broken,so the buggy code will automatically reflect into my local repositry,so i would like to pull it manually when the bug get fixed.
