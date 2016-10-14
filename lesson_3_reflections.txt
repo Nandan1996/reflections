@@ -25,3 +25,8 @@ local?
        i use clone when i want to work on a repository locally rather than using github website.
        i use branching when i want to add changes to reposity without affecting the existing
        version(master branch).i.e main production.
+
+
+>What is the benefit of having a copy of the last known state of the remote stored locally?
+
+       if you go on a flight and you might have wanted to make change locally(offline) then you may prefer the latest remote.
