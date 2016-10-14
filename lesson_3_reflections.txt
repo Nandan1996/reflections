@@ -30,3 +30,12 @@ local?
 >What is the benefit of having a copy of the last known state of the remote stored locally?
 
        if you go on a flight and you might have wanted to make change locally(offline) then you may prefer the latest remote.
+
+>How would you collaborate without using Git or GitHub? What would be easier, and what would be
+ harder?
+
+       -sit side by side,but all collaborator can not be together i.e can not make changes
+        remotely and have to work offline always.
+       -update your every changes at a common place in the cloud that can be seen by all the
+        collaborator, like on google drive but you already know the difficulty in maintaing all
+        version on such platform.
